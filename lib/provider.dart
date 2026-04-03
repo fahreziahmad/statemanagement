@@ -47,4 +47,24 @@ class FormPage extends ConsumerWidget {
               onChanged: (value) =>
                   ref.read(emailProvider.notifier).state = value,
             ),
-           
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    //SnackBar(content: Text("$nama - $email")),
+                    content: Text("Submit sukses !"),
+                  ),
+                );
+              },
+              child: Text("Submit"),
+            ),
+            SizedBox(height: 10),
+            Text("Nama: $nama"),
+            Text("Email: $email"),
+          ],
+        ),
+      ),
+    );
+  }
+}
