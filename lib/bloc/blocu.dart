@@ -3,3 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 abstract class FormEvent {}
 
+class NamaChanged extends FormEvent {
+  final String nama;
+  NamaChanged(this.nama);
+}
+
