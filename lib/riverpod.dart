@@ -4,3 +4,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 //PROVIDER
 final namaProvider = StateProvider<String>((ref) => "");
 final emailProvider = StateProvider<String>((ref) => "");
+
+void main() {
+  runApp(
+    ProviderScope(
+      child: MyApp(),
+    ),
+  );
+}
